@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
+    <title>Assignment</title>
+    <style>
+    * {box-sizing: border-box}
 
 /* Set height of body and the document to 100% */
 body, html {
@@ -42,7 +36,6 @@ body, html {
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   color: rgb(7, 7, 7);
-  display: none;
   padding: 100px 20px;
   height: 100%;
   margin: 0px;
@@ -50,207 +43,49 @@ body, html {
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-#Home {background-color:#e6e6e6;}
-#Contact {background-color: #e6e6e6;}
-#About {background-color: #e6e6e6;}
-</style>
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div style="color: aliceblue; height: 20vh;">
-        
- <img src="gcclogo.png" width="120" alt="" style="z-index: -1;">
- 
+
+  <img src="gcclogo.png" width="120" alt="" style="z-index: -1;">
+
 </div>
 <div style="width: 100%; background-color:#555; height: 48px;">
 <div style="width: 50%; margin-left: 30%;">
-<button class="tablink" onclick="openPage('Home', this, '#e6e6e6')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('About', this, '#e6e6e6')">About</button>
-<button class="tablink" onclick="openPage('Contact', this, '#e6e6e6')">Login</button>
-</div>
-</div>
-<div id="Home" class="tabcontent" >
-        <div class="slideshow-container">
+<a href="#home" class="tablink">Home</a>
+<a href="#login" class="tablink">Login</a>
+<a href="#about" class="tablink">About</a>
 
-                <div class="mySlides fade">
-                  <div class="numbertext">1 / 3</div>
-                  <center>
-                  <img src="1.jpg" style="width:50%;">
-                </center>
-                  <div class="text">“When you can’t find the sunshine, be the sunshine”</div>
-                </div>
-                
-                <div class="mySlides fade">
-                  <div class="numbertext">2 / 3</div>
-                  <center>
-                  <img src="2.jpg" style="width:50%">
-                </center>
-                  <div class="text">“The grass is greener where you water it”</div>
-                </div>
-                
-                <div class="mySlides fade">
-                  <div class="numbertext">3 / 3</div>
-                <center>
-                  <img src="3.jpg" style="width:50%">
-                </center>
-                  <div class="text">“Wherever life plants you, bloom with grace”</div>
-                </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                
-                </div>
-                <br>
-                
-                <div style="text-align:center">
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span> 
-                </div>
+</div>
+</div>
+<div id="home" class="tabcontent" style="height: 100vh;">
+    
+    <h1 id="head" style="position: absolute; color: #000000; margin-left: 35%; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Gingoog City Colleges</h1>
+    <h2 id="head1" style="position: absolute; font-size: initial; margin-left: 36.5%; margin-top: 10vh;">Brgy. 24A Paz Villages Gingoog City</h2>
+
+    <p id="p" style="border: solid black 2px; margin-top: 20vh; padding: 20px;"> The most important thing is to enjoy your life - to be happy - it's all that matters.</p>
 </div>
 
-<div id="Contact" class="tabcontent">
+<div class="tabcontent" id="about" style="height: 90vh;">
+    <div style=" text-align: center; margin-top: -50px;">
+        <div style="border: solid black 2px; padding-top: 10px;">
+        <img src="profile.jpg" alt="profile.jpg" width="300" style="border-radius: 20px;">
+        <h2 style="margin-left: -50px;">Name: <u>Louie S. Cagas </u> </h2>
+        <h2 style="margin-left: 110px;">Address: <u>Brgy: Lunao, Gingoog City</u></h2>
+        <h2 style="margin-left: -90px;">Year/Level: <u>BSIT IV</u></h2>
+        </div>
+    </div>
+</div>
+
+<div id="login" class="tabcontent" style="100vh;">
     <div style="margin-top: -50px;">
         <center>
                 <h2>Login Form</h2\>
@@ -265,9 +100,7 @@ img {vertical-align: middle;}
                     <input type="password" placeholder="Enter Password" name="psw" required>
                         
                     <button type="submit">Login</button>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
+                    
                   </div>
                 
                   <div class="container" style="background-color:#f1f1f1">
@@ -277,66 +110,10 @@ img {vertical-align: middle;}
             </div>
 </div>
 
-<div id="About" class="tabcontent">
-    <div style=" text-align: center; margin-top: -50px;">
-        <div style="border: solid black 2px; padding-top: 10px;">
-        <img src="profile.jpg" alt="profile.jpg" width="300" style="border-radius: 20px;">
-        <h2 style="margin-left: -50px;">Name: <u>Louie S. Cagas </u> </h2>
-        <h2 style="margin-left: 110px;">Address: <u>Brgy: Lunao, Gingoog City</u></h2>
-        <h2 style="margin-left: -90px;">Year/Level: <u>BSIT IV</u></h2>
-        </div>
-    </div>
-</div>
-
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
    
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_js_full_page_tabs by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Feb 2019 06:21:27 GMT -->
+
 </html> 
 
 </body>
