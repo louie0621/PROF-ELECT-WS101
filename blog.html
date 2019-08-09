@@ -5,59 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Website </title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <!-- Material Font -->
+    <link rel="stylesheet" href="./assets/css/material-font.css">
+    <!-- Mobile Support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Material JS -->
+     <script src="./assets/js/materialize.min.js"></script>
+     
+     <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <title>Website</title>
+
 </head>
 <body>
-<div class="container">
-    <div class="header">
-         <img class="img" src="img/gcclogo.png" width="150">
-         <div class="header_title">
-                <h1>GINGOOG CITY COLLEGES</h1>
-                <h3>Brgy. 24A Paz Villages Gingoog City</h3>
-         </div>
-
-    </div>
     
-    <div class="nav">
-        
-        <ul>
-            <li ><a href="index.html">Home</a></li>
-            <li class="current"><a href="blog.html">Blog</a></li>
-            <li ><a href="login.html">Login</a></li>
-        </ul>
-    </div>
-    <div class="main-container_blog">
- 
-<div class="slideshow-container">
+        <div class="row">
+            <div class="header col s12">
+                <img src="./assets/img/gcclogo.png" alt="" width="150" >
+                <h1>Gingoog City Colleges</h1>
+            </div>
+        </div>
+    
+    <nav>
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+          <div  class="row">
+                <div class="carousel">
+                        <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+                        <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+                        <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+                        <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+                        <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+                      </div>
+          </div>
+      </div>
 
-        <div class="mySlides fade">
-          <img src="img/2.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <img src="img/3.jpg" style="width:100%">
-          <div class="text">Caption Two</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <img src="img/4.jpg" style="width:100%">
-          <div class="text">Caption Three</div>
-        </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
-        </div>
-        <br>
-        
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
-        
-</div>
-    <script src="js/javascript.js"></script>
+     
+
+    <script src="./assets/js/javascript.js"></script>
 </body>
 </html>
