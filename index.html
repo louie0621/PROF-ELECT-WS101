@@ -28,7 +28,7 @@
         </div>
     
     <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper  blue lighten-1">
           <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -37,18 +37,20 @@
         </div>
       </nav>
       <div class="container">
-          <div  class="row">
-             
-            </div>
+            <div class="carousel">
+                    <div class="carousel carousel-slider">
+                        <a class="carousel-item" href="#one!"><img src="./assets/img/1.jpg"></a>
+                        <a class="carousel-item" href="#two!"><img src="./assets/img/2.jpg"></a>
+                        <a class="carousel-item" href="#three!"><img src="./assets/img/3.jpg"></a>
+                        <a class="carousel-item" href="#four!"><img src="./assets/img/4.jpg"></a>
+                    </div>
+            
+        </div>
 
      
 
    <script>
-   $(document).ready(function(){
-  $('.carousel').carousel();
-
-  $('.tap-target').tapTarget();
-});
+  M.AutoInit();
 </script>
     
 </body>
