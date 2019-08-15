@@ -4,33 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Website</title>
+    <title>Material</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Material Font -->
+    <link rel="stylesheet" href="./assets/css/material-font.css">
+    <!-- Mobile Support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="./assets/js/materialize.min.js"></script>
+    <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/vue2.js"></script>
+    
+    
 </head>
 <body>
-<div class="container"> 
-    <div class="header"> 
-         <img class="img" src="img/gcclogo.png" width="150">
-         <div class="header_title">
-                <h1>GINGOOG CITY COLLEGES</h1>
-                <h3>Brgy. 24A Paz Villages Gingoog City</h3>
-         </div>
+  <section class="todoapp" style="background-color: aliceblue">
+    <header class="header">
+      <input class="new-todo"
+          autocomplete="off"
+          placeholder="Type your todo list"
+          v-model="newTodo"
+          @keyup.enter="addTodo">
+        <button class="new-todo-button" style="margin-top:-10px;"
+          @click="addTodo"  
+          v-show="newTodo.length > 0"
+        ></button>
+    </header>
+    <section class="main" v-show="todos.length" v-cloak>
+      <div class="completed-wrapper">
+        <input id="toggle-all" class="toggle-all" type="checkbox" v-model="allDone">
+        <label for="toggle-all">Complete all tasks</label>
+        <button class="clear-completed" @click="removeCompleted">
+          Clear completed
+        </button>
+      </div>
+      <ul class="todo-list">
+        <li v-for="todo in filteredTodos"
+          class="todo"
+          :key="todo.id"
+          :class="{ completed: todo.completed, editing: todo == editedTodo }">
+          <div class="view">
+            <input class="toggle" type="checkbox" v-model="todo.completed">
+            <label @dblclick="editTodo(todo)">{{ todo.title }}</label>
+            <button class="destroy" @click="removeTodo(todo)"></button>
+          </div>
+          <input class="edit" type="text"
+            v-model="todo.title"
+            v-todo-focus="todo == editedTodo"
+            @blur="doneEdit(todo)"
+            @keyup.enter="doneEdit(todo)"
+            @keyup.esc="cancelEdit(todo)">
+        </li>
+      </ul>
+    </section>
+    <footer class="footer" v-show="todos.length" v-cloak>
+      <span class="todo-count">
+        <strong>{{ remaining }}</strong> {{ remaining | pluralize }} left
+      </span>
+      <ul class="filters">
+        <li><a href="#/all" :class="{ selected: visibility == 'all' }">All</a></li>
+        <li><a href="#/active" :class="{ selected: visibility == 'active' }">Uncomplete</a></li>
+        <li><a href="#/completed" :class="{ selected: visibility == 'completed' }">Completed</a></li>
+      </ul>
+    </footer>
+  </section>
 
-    </div>
-    
-    <div class="nav">
-        
-        <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li ><a href="blog.html">Blog</a></li>
-            <li ><a href="login.html">Login</a></li>
-        </ul>
-    </div>
-    <div class="main-container">
-        <br><br><br><br>
-        <h1 class="h1_body">Friendship ... is born at the moment when one man says to another "What! You too? I thought that no one but myself . . .” </h1>
-    </div>
-</div>
-    <script src="js/javascript.js"></script>
+<script src="./assets/js/script.js"></script>
+
 </body>
 </html>
